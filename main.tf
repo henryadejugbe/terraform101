@@ -89,15 +89,15 @@ resource "azurerm_linux_virtual_machine" "p444-vm" {
   disable_password_authentication = false
   network_interface_ids = [azurerm_network_interface.p444-nic.id,]
 
-   os_disk {
-    caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
+  os_disk {
+  caching              = "ReadWrite"
+  storage_account_type = "Standard_LRS"
   }
 
-  source_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
-    version   = "latest"
+source_image_reference {
+  publisher = "Canonical"
+  offer     = "UbuntuServer"
+  sku       = "18.04-LTS"
+  version   = "latest"
   }
 }
